@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+
+:root {
+    /* Couleurs principales */
+    --primary-color: #0A0E0A;        /* Noir profond avec nuance verte */
+    --secondary-color: #A5C759;      /* Vert phosphore clair */
+    --accent-color: #3D4A2F;         /* Vert olive foncé */
+
+    /* Couleurs complémentaires */
+    --bg-dark: #0D120D;              /* Fond très sombre */
+    --bg-medium: #1A2418;            /* Fond moyen */
+    --text-primary: #D4E89E;         /* Texte vert clair */
+    --text-secondary: #8BA84E;       /* Texte vert moyen */
+    --text-dim: #5C7340;             /* Texte atténué */
+
+    /* Accents et effets */
+    --glow-primary: #C5E86C;         /* Lueur phosphore */
+    --glow-shadow: rgba(165, 199, 89, 0.3);  /* Ombre lumineuse */
+    --border-color: #4A5C38;         /* Bordures */
+
+    /* États interactifs */
+    --hover-color: #BFD96B;          /* Survol */
+    --active-color: #8FA54A;         /* Actif/pressé */
+    --disabled-color: #3A4830;       /* Désactivé */
+
+    /* Font principale */
+    --font-primary: 'Silkscreen', 'Courier New', monospace;
+}
+
+* {
+    font-family: var(--font-primary), serif;
+}
+
+/* Classes utilitaires Tailwind personnalisées */
+@layer utilities {
+    .glow-text {
+        text-shadow: 0 0 10px var(--glow-shadow),
+        0 0 20px var(--glow-shadow),
+        0 0 30px var(--glow-shadow);
+    }
+
+    .glow-box {
+        box-shadow: 0 0 20px var(--glow-shadow),
+        inset 0 0 20px rgba(165, 199, 89, 0.1);
+    }
+
+    .retro-border {
+        border: 2px solid var(--border-color);
+        box-shadow: inset 0 0 10px rgba(165, 199, 89, 0.2);
+    }
+
+    .pixel-perfect {
+        image-rendering: pixelated;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
