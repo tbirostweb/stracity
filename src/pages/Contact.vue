@@ -1,5 +1,18 @@
 <script setup>
+import { ref } from "vue";
 import Navigation from "../components/Navigation.vue";
+import Footer from "../components/Footer.vue";
+
+// [À COMPLÉTER : destinataire et canal d'envoi (endpoint POST HTTPS ou e-mail) à fournir par l'exploitant.]
+// Tant qu'aucun canal n'est configuré, le formulaire n'envoie rien (ni GET, ni POST) : aucune donnée n'est placée dans l'URL.
+const CONTACT_ENABLED = false;
+const status = ref("");
+
+const onSubmit = () => {
+  if (!CONTACT_ENABLED) {
+    status.value = "Le formulaire de contact n'est pas encore disponible : aucun message n'a été envoyé.";
+  }
+};
 </script>
 
 <template>
@@ -32,6 +45,9 @@ import Navigation from "../components/Navigation.vue";
 
     <section class="flex justify-center py-16 px-6">
       <form
+          method="post"
+          novalidate
+          @submit.prevent="onSubmit"
           class="w-full max-w-xl bg-[var(--bg-light)] p-8 rounded-2xl shadow-xl flex flex-col gap-6"
       >
         <div class="flex flex-col text-left">
@@ -56,14 +72,27 @@ import Navigation from "../components/Navigation.vue";
           ></textarea>
         </div>
 
+        <p
+            v-if="!CONTACT_ENABLED"
+            class="text-left pixel-perfect"
+            data-testid="contact-indisponible"
+        >
+          Le formulaire n'est pas encore actif : aucun message ne sera envoyé.
+        </p>
+        <p v-if="status" role="status" class="text-left pixel-perfect" data-testid="contact-status">{{ status }}</p>
+
         <button
             type="submit"
-            class="mt-4 py-3 rounded-xl border-2 border-[var(--secondary-color)] text-[var(--secondary-color)] font-bold pixel-perfect hover:bg-[var(--secondary-color)] hover:text-[var(--bg-dark)] transition-all duration-300"
+            :disabled="!CONTACT_ENABLED"
+            :aria-disabled="!CONTACT_ENABLED"
+            
+            class="mt-4 py-3 rounded-xl border-2 border-[var(--secondary-color)] text-[var(--secondary-color)] font-bold pixel-perfect hover:bg-[var(--secondary-color)] hover:text-[var(--bg-dark)] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
         >
           Envoyer
         </button>
       </form>
     </section>
+    <Footer />
   </div>
 </template>
 

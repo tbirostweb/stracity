@@ -27,12 +27,12 @@ onMounted(() => {
   <div class="bg-[var(--bg-dark)] min-h-screen flex flex-col justify-center items-center gap-12 p-8">
 
     <div class="text-center">
-      <h1 class="text-[var(--secondary-color)] text-7xl font-extrabold glow-text pixel-perfect mb-4 animate-pulse">
-        CHARGEMENT
+      <h1 class="text-[var(--secondary-color)] font-extrabold glow-text pixel-perfect mb-4 animate-pulse">
+        <span class="block text-7xl">CHARGEMENT</span>
+        <span class="block text-4xl">DE</span>
+        <span class="block text-7xl">STRACITY</span>
       </h1>
-      <h1 class="text-[var(--secondary-color)] text-4xl font-extrabold glow-text pixel-perfect mb-4 animate-pulse">DE</h1>
-      <h1 class="text-[var(--secondary-color)] text-7xl font-extrabold glow-text pixel-perfect mb-4 animate-pulse">STRACITY</h1>
-      <p class="text-[var(--text-secondary)] text-xl glow-text">
+      <p class="text-[var(--text-secondary)] text-xl glow-text" role="status">
         {{ Math.floor(progress) }}%
       </p>
     </div>

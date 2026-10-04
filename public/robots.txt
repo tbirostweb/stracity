@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# À COMPLÉTER : ajouter "Sitemap: https://<DOMAINE>/sitemap.xml" quand le domaine public est confirmé.

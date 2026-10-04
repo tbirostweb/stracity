@@ -1,13 +1,14 @@
 <script setup>
 import Navigation from "../components/Navigation.vue";
+import Footer from "../components/Footer.vue";
 </script>
 
 <template>
-  <div class="max-h-screen overflow-hidden">
+  <div class="min-h-screen flex flex-col bg-[var(--bg-dark)]">
     <Navigation />
 
     <section
-        class="relative flex flex-col items-center justify-center h-screen bg-[var(--bg-dark)] px-6 text-center overflow-hidden"
+        class="relative flex flex-col items-center justify-center flex-1 py-16 bg-[var(--bg-dark)] px-6 text-center overflow-hidden"
     >
 
       <div class="relative z-10 -up">
@@ -42,6 +43,7 @@ import Navigation from "../components/Navigation.vue";
 
       </div>
     </section>
+    <Footer />
   </div>
 </template>
 
