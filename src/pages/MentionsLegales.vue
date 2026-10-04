@@ -14,11 +14,11 @@ const placeholder = (label) => `[À COMPLÉTER : ${label}]`;
       <section class="mb-8">
         <h2 class="text-2xl font-bold mb-2">Éditeur du site</h2>
         <ul class="space-y-1" data-testid="editeur">
-          <li>Nom ou dénomination : {{ placeholder("nom de l'éditeur") }}</li>
-          <li>Statut / forme juridique et numéro d'immatriculation : {{ placeholder("statut, SIREN/SIRET si applicable") }}</li>
-          <li>Adresse : {{ placeholder("adresse de l'éditeur") }}</li>
-          <li>Contact : {{ placeholder("e-mail ou moyen de contact de l'éditeur") }}</li>
-          <li>Directeur de la publication : {{ placeholder("nom du directeur de la publication") }}</li>
+          <li>Nom ou dénomination : Théo Birost — nom commercial « Birostweb »</li>
+          <li>Statut / forme juridique et numéro d'immatriculation : Entrepreneur individuel (EI) — SIREN 108 892 993 · SIRET (siège) 108 892 993 00016</li>
+          <li>Adresse : 6 rue Georges Guynemer, 10450 Bréviandes</li>
+          <li>Contact : contact@theo-birost.fr</li>
+          <li>Directeur de la publication : Théo Birost</li>
         </ul>
       </section>
 

@@ -12,7 +12,7 @@ const placeholder = (label) => `[À COMPLÉTER : ${label}]`;
 
       <section class="mb-8">
         <h2 class="text-2xl font-bold mb-2">Responsable du traitement</h2>
-        <p>{{ placeholder("identité et contact du responsable, voir mentions légales") }}</p>
+        <p>Théo Birost (Birostweb, entrepreneur individuel) — contact@theo-birost.fr. Identité complète : voir les mentions légales.</p>
       </section>
 
       <section class="mb-8">
@@ -49,7 +49,7 @@ const placeholder = (label) => `[À COMPLÉTER : ${label}]`;
         <p>
           Conformément au RGPD, vous pouvez demander l'accès, la rectification ou l'effacement de
           vos données, et introduire une réclamation auprès de la CNIL (cnil.fr).
-          Pour exercer vos droits : {{ placeholder("adresse de contact de l'exploitant") }}.
+          Pour exercer vos droits : contact@theo-birost.fr.
         </p>
       </section>
     </main>
