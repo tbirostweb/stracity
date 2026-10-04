@@ -33,6 +33,11 @@ const placeholder = (label) => `[À COMPLÉTER : ${label}]`;
       <section>
         <h2 class="text-2xl font-bold mb-2">Propriété intellectuelle</h2>
         <p>{{ placeholder("conditions d'usage et de réutilisation du contenu, à définir par l'exploitant") }}</p>
+        <h3 class="text-xl font-bold mt-4 mb-2">Crédits</h3>
+        <p>
+          Police d'affichage Silkscreen, © The Silkscreen Project Authors, licence SIL Open Font License 1.1,
+          diffusée avec le site. Le site est construit avec Vue, Vue Router et Tailwind CSS (licence MIT).
+        </p>
       </section>
     </main>
     <Footer />
